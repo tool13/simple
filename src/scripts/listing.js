@@ -3,18 +3,6 @@ export class Listing {
         this.viewport = element.querySelector('.js-list-viewport');
         this.holder = this.viewport.querySelector('.js-list-holder');
         this.lastElement = this.holder.children[this.holder.children.length - 1];
-        this.isEnd = null;
-        this.observerOptions = {
-            root: this.viewport,
-            threshold: .6
-        }
-        this.observerCallback = (entries) => {
-            entries.forEach(entry => {
-                this.isEnd = !(entry.intersectionRatio > this.observerOptions.threshold);
-            });
-        }
-        this.observer = new IntersectionObserver(this.observerCallback, this.observerOptions);
-        this.observer.observe(this.holder);
     }
     get currentPosition() {
         return Number(this.holder.style.transform.match(/-?\d+/g));
@@ -32,17 +20,25 @@ export class Listing {
         if (direction < 0 && this.currentPosition === 0) {
             return false;
         }
-        if (direction > 0 && this.isEnd) {
+        if (direction > 0 && this.checkEnd()) {
             return false;
         }
         return true;
     }
+    checkEnd() {
+        return this.lastElement.getBoundingClientRect().top / 2 < this.viewport.getBoundingClientRect().top;
+    }
     move(direction) {
         let shift;
-        direction < 0 ? shift = this.currentPosition + this.step : shift = this.currentPosition - this.step;
+        if (direction < 0) {
+            shift = this.currentPosition + this.step;
+        } else {
+            shift = this.currentPosition - this.step;
+        }
         this.holder.style.transform = `translateY(${shift}px)`;
     }
     reset() {
+        this.count = 0;
         this.holder.style.transform = '';
     }
 }
