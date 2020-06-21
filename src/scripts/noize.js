@@ -1,6 +1,6 @@
 export function Grain(el) {
     /**
-    * Optionss
+    * Options
     */
     this.patternSize = 150;
     this.patternScaleX = 1;
