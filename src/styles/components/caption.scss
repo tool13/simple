@@ -1,11 +1,11 @@
 .caption {
     margin: 0;
-    font-size: 8.96vh;
+    font-size: calc(var(--vh, 1vh) * 8.96);
     line-height: 1.345;
     color: $text-inactive;
 
     &--smaller {
-        font-size: 6.66vh;
+        font-size: calc(var(--vh, 1vh) * 6.66);
     }
 
     &__line {

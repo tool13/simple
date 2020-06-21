@@ -17,7 +17,7 @@
     }
 
     &__wrapper {
-        height: 74.85vh;
+        height: calc(var(--vh, 1vh) * 74.85);
         overflow: hidden;
         -webkit-mask-image: linear-gradient(to bottom, $bg-color, transparent);
         mask-image: linear-gradient(to bottom, $bg-color, transparent);
@@ -87,7 +87,7 @@
 
     &__link {
         display: block;
-        font-size: 9.275vh;
+        font-size: calc(var(--vh, 1vh) * 9.275);
         line-height: 1.345;
         color: $link-inactive;
         text-decoration: none;

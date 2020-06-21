@@ -1,9 +1,9 @@
 .content {
     height: 100%;
-    padding-top: 22vh;
+    padding-top: calc(var(--vh, 1vh) * 22);
 
     @media (min-width: $laptop) {
-        padding-top: 22vh;
+        padding-top: calc(var(--vh, 1vh) * 22);
         padding-bottom: 70px;
     }
 
@@ -43,8 +43,8 @@
 
     &__descr {
         margin: 0;
-        font-size: 9.185vh;
-        line-height: 12.25vh;
+        font-size: calc(var(--vh, 1vh) * 9.185);
+        line-height: calc(var(--vh, 1vh) * 12.25);
     }
 
     &__line {

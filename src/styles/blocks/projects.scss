@@ -1,9 +1,9 @@
 .projects {
     position: relative;
-    padding-top: 41.65vh;
+    padding-top: calc(var(--vh, 1vh) * 41.65);
 
     @media (min-width: $laptop) {
-        padding-top: 21.5vh;
+        padding-top: calc(var(--vh, 1vh) * 21.5);
     }
 
     &__wrapper {
@@ -13,7 +13,7 @@
 
     &__inner {
         max-width: 1280px;
-        height: 60.256vh;
+        height: calc(var(--vh, 1vh) * 60.256);
         margin: 0 auto;
         overflow: hidden;
         -webkit-mask-image: linear-gradient(to bottom, var(--projects-bg), rgba(0,0,0,0.001));
@@ -40,7 +40,7 @@
         position: relative;
         display: flex;
         align-items: baseline;
-        font-size: 8.96vh;
+        font-size: calc(var(--vh, 1vh) * 8.96);
         line-height: 1.345;
         color: rgba(255,255,255,.5);
 

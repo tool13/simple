@@ -1,8 +1,8 @@
 .hero {
-    padding-top: 33vh;
+    padding-top: calc(var(--vh, 1vh) * 33);
 
     @media (min-width: $laptop) {
-        padding-top: 21.5vh;
+        padding-top: calc(var(--vh, 1vh) * 21.5);
     }
 
     &__inner {

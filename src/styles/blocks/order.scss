@@ -1,8 +1,8 @@
 .order {
-    padding-top: 25vh;
+    padding-top: calc(var(--vh, 1vh) * 25);
 
     @media (min-width: $laptop) {
-        padding-top: 21.5vh;
+        padding-top: calc(var(--vh, 1vh) * 21.5);
     }
 
     &__inner {
@@ -25,7 +25,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-top: 10vh;
+            margin-top: calc(var(--vh, 1vh) * 10);
         }
 
         @media (min-width: $laptop) and (orientation: portrait) {
@@ -41,7 +41,7 @@
 
     &__form {
         max-width: 980px;
-        margin-top: 5.25vh;
+        margin-top: calc(var(--vh, 1vh) * 5.25);
 
         @media (min-width: $laptop) {
             min-width: 320px;
