@@ -1,0 +1,106 @@
+.menu {
+    width: 100%;
+    background-color: $bg-color;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+
+    @media (min-width: $laptop) {
+        pointer-events: auto;
+        background-color: transparent;
+        opacity: 1;
+    }
+
+    &.opened {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &__wrapper {
+        height: 74.85vh;
+        overflow: hidden;
+        -webkit-mask-image: linear-gradient(to bottom, $bg-color, transparent);
+        mask-image: linear-gradient(to bottom, $bg-color, transparent);
+
+        @media (min-width: $laptop) {
+            height: auto;
+            padding: 0;
+            overflow: initial;
+            -webkit-mask-image: unset;
+        }
+    }
+
+    &__links {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        transition: transform .3s ease;
+
+        @media (min-width: $laptop) {
+            display: flex;
+            align-items: center;
+            transition: none;
+        }
+    }
+
+    &__item {
+        @media (min-width: $laptop) {
+            padding-inline-start: 50px;
+            padding-inline-end: 50px;
+
+            &--social {
+                display: none;
+            }
+
+            &--main {
+                &:first-of-type {
+                    padding-inline-start: 0;
+                }
+        
+                &:last-of-type {
+                    padding-inline-end: 0;
+                }
+    
+                &:not(:first-of-type) {
+                    position: relative;
+    
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: calc(50% - 5px);
+                        left: 0;
+                        width: 1px;
+                        height: 10px;
+                        background-color: #fff;
+
+                        @media (min-width: $laptop) and (orientation: portrait) {
+                            top: 0;
+                            left: calc(50% - 5px);
+                            width: 10px;
+                            height: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        font-size: 9.275vh;
+        line-height: 1.345;
+        color: $link-inactive;
+        text-decoration: none;
+
+        @media (min-width: $laptop) {
+            padding-inline-start: 20px;
+            padding-inline-end: 20px;
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        &.active {
+            color: inherit;
+        }
+    }
+}

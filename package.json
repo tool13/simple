@@ -1,0 +1,33 @@
+{
+  "name": "simple",
+  "version": "1.0.0",
+  "description": "landing page",
+  "main": "index.pug",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.pug --open",
+    "build": "parcel build src/index.pug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tool13/simple.git"
+  },
+  "author": "maxi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tool13/simple/issues"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "parcel-bundler": "^1.12.4",
+    "pug": "^2.0.4",
+    "sass": "^1.25.0"
+  },
+  "babel": {
+    
+  }
+}

@@ -1,0 +1,56 @@
+// noize bar moving
+@keyframes bar {
+    @for $frame from 0 to 25 {
+        #{$frame * 4%} {
+            $vertical: random(550) - 550 * 0.5 + px;
+            transform: translateY($vertical) scaleY(random(5));
+            opacity: random(20) * 0.01;
+        }
+    }
+}
+
+@keyframes bar2 {
+    @for $frame from 0 to 25 {
+        #{$frame * 4%} {
+            $vertical: random(350) - 350 * 0.5 + px;
+            transform: translateY($vertical) scaleY(random(5));
+            opacity: random(20) * 0.01;
+        }
+    }
+}
+
+// text-shadow moving
+
+@keyframes shadow {
+    @for $frame from 0 to 20 {
+        #{$frame * 5%} {
+            $vertical1: random(10) - 10 * 0.5 + px;
+            $horizontal1: random(10) - 10 * 0.5 + px;
+            $vertical2: random(10) - 10 * 0.5 + px;
+            $horizontal2: random(10) - 10 * 0.5 + px;
+            text-shadow: 
+                $vertical1 $horizontal1 0 $text-shadow-color-back,
+                $vertical2 $horizontal2 0 $text-shadow-color-forward;
+        }
+    }
+}
+
+// text moving
+
+@keyframes glitch-skew {
+    $steps: 10;
+    @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+        transform: skew((random(5) - 3) + deg);
+      }
+    }
+  }
+
+  @keyframes strong-skew {
+    $steps: 3;
+    @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+        transform: skew((random(360) - 180) + deg) translateX(random(600) + px);
+      }
+    }
+  }

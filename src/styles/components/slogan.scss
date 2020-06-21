@@ -1,0 +1,16 @@
+.slogan {
+    display: inline-block;
+    padding-top: 16px;
+    width: 50px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+}

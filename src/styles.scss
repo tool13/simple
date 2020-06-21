@@ -1,0 +1,19 @@
+// base
+@import "styles/base/normalize.scss";
+@import 'styles/base/vars.scss';
+@import 'styles/base/fonts.scss';
+@import 'styles/base/global.scss';
+
+// components
+@import "styles/components/burger.scss";
+@import "styles/components/slogan.scss";
+@import "styles/components/menu.scss";
+@import "styles/components/social.scss";
+@import "styles/components/caption.scss";
+@import "styles/components/form.scss";
+
+// blocks
+@import "styles/blocks/layout.scss";
+@import "styles/blocks/hero.scss";
+@import "styles/blocks/projects.scss";
+@import "styles/blocks/order.scss";

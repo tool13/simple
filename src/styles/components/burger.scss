@@ -1,0 +1,34 @@
+.burger {
+    width: 60px;
+    height: 45px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    $this: &;
+
+    &__lines,
+    &__cross {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        transform: translate(-50%,-50%);
+    }
+
+    &__cross {
+        display: none;
+    }
+
+    &.opened {
+        & #{$this}__lines {
+            display: none;
+        }
+
+        & #{$this}__cross {
+            display: block;
+        }
+    }
+}

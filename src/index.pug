@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="/styles.scss")
+        title Simple
+    body
+        main.layout
+            .layout__noize.js-noize
+                canvas
+
+            .layout__logo
+                img(src="images/logo.svg" width="32" height="36" alt="logo")
+
+            button.layout__burger.burger.js-menu-toggle(type="button", aria-label="open menu")
+                svg.burger__lines(viewBox="0 0 30 26")
+                    line(x1="0" y1="2" x2="30" y2="2" stroke="#fff" stroke-width="3")
+                    line(x1="0" y1="13" x2="30" y2="13" stroke="#fff" stroke-width="3")
+                    line(x1="0" y1="24" x2="30" y2="24" stroke="#fff" stroke-width="3")
+                svg.burger__cross(viewBox="0 0 26 26")
+                    line(x1="0" y1="0" x2="26" y2="26" stroke="#fff" stroke-width="3")
+                    line(x1="0" y1="26" x2="26" y2="0" stroke="#fff" stroke-width="3")
+
+            nav.layout__menu.menu.js-menu
+                .menu__wrapper.holder.js-list-viewport
+                    ul.menu__links.js-list-holder
+                        li.menu__item.menu__item--main
+                            a.menu__link.active.js-nav-link.js-list-item(href="#hero") we
+                        li.menu__item.menu__item--main
+                            a.menu__link.js-nav-link.js-list-item(href="#projects") portfolio
+                        li.menu__item.menu__item--main
+                            a.menu__link.js-nav-link.js-list-item(href="#order") contacts
+                        li.menu__item.menu__item--social
+                            a.menu__link.js-list-item(href="#") instagram
+                        li.menu__item.menu__item--social
+                            a.menu__link.js-list-item(href="#") behance
+                        li.menu__item.menu__item--social
+                            a.menu__link.js-list-item(href="#") youtube
+
+            .layout__sections.js-sections
+                section.layout__content.hero.js-section.current(id='hero')
+                    .holder
+                        h2.title Design studio
+                        .hero__inner
+                            p.hero__caption.caption
+                                span.caption__line all 
+                                span.caption__line ingenious 
+                                span.caption__line is 
+                                span.caption__line.caption__line--mark easy
+
+                section.layout__content.projects.js-projects.js-section(id='projects')
+                    .holder.projects__wrapper
+                        h2.title Portfolio
+                        .projects__inner.js-list-viewport
+                            ul.projects__list.js-list-holder
+                                li.projects__item.js-projects-item.js-list-item(data-name="mms")
+                                    h3.projects__name M&M’s
+                                    a.projects__link(href="#" target="_blank") behance
+                                li.projects__item.js-projects-item.js-list-item(data-name="heinz")
+                                    h3.projects__name Heinz
+                                    a.projects__link(href="#" target="_blank") behance
+                                li.projects__item.js-projects-item.js-list-item(data-name="epidemia")
+                                    h3.projects__name epidemia
+                                    a.projects__link(href="#" target="_blank") behance
+                                li.projects__item.js-projects-item.js-list-item(data-name="baskin")
+                                    h3.projects__name baskin robbins
+                                    a.projects__link(href="#" target="_blank") behance
+                                li.projects__item.js-projects-item.js-list-item(data-name="heinz")
+                                    h3.projects__name Heinz
+                                    a.projects__link(href="#" target="_blank") behance
+                                li.projects__item.js-projects-item.js-list-item(data-name="epidemia")
+                                    h3.projects__name epidemia
+                                    a.projects__link(href="#" target="_blank") behance
+                                li.projects__item.js-projects-item.js-list-item(data-name="baskin")
+                                    h3.projects__name baskin robbins
+                                    a.projects__link(href="#" target="_blank") behance
+                    .projects__gallery.js-projects-gallery
+                        
+
+                section.layout__content.order.js-section(id='order')
+                    .holder
+                        h2.title Contact
+                        .order__inner
+                            p.order__caption.caption.caption--smaller
+                                span.caption__line Need help with 
+                                span.caption__line a&nbsp;project?
+                            form.order__form.form.js-form(name="request-form" action="#" method="POST" enctype="multipart/form-data")
+                                input.form__input(type="text" placeholder="name")
+                                input.form__input(type="tel" placeholder="phone")
+                                .form__holder
+                                    label.form__upload
+                                        span.form__upload-text.js-upload-text your file
+                                        input.form__file.visually-hidden.js-upload-input(type="file" name="file")
+                                    button.form__submit(type="submit") GO
+
+            strong.layout__slogan.slogan.js-slogan we only do what we love
+
+            .layout__social.social
+                .holder.social__wrapper
+                    ul.social__list
+                        li.social__item
+                            a.social__link(href="#") instagram
+                        li.social__item
+                            a.social__link(href="#") behance
+                        li.social__item
+                            a.social__link(href="#") youtube
+
+        script(src="/scripts/main.js")

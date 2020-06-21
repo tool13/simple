@@ -1,0 +1,87 @@
+.stub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        text-align: center;
+    }
+
+    &__heading {
+        position: relative;
+        margin: 60px 0 70px;
+        font-size: 200px;
+        line-height: 200px;
+        letter-spacing: 34px;
+        text-indent: 34px;
+        animation: glitch-skew 1s infinite linear alternate-reverse;
+
+        &.shadow {
+            &::before {
+                animation: shadow 1.5s step-start .5s;
+            }
+        }
+        
+        &::before {
+            content: 'simple';
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-shadow: 
+                0 0 0 $text-shadow-color-back,
+                0 0 0 $text-shadow-color-forward;
+        }
+        
+
+        @media (max-width: $laptop) {
+            margin: 5vw 0 6vw;
+            font-size: 18vw;
+            line-height: 18vw;
+            letter-spacing: 24px;
+            text-indent: 24px;
+        }
+
+        @media (max-height: $critical-height) {
+            margin: 20px 0 30px;
+            font-size: 60px;
+            line-height: 60px;
+            letter-spacing: 24px;
+            text-indent: 24px;
+        }
+    }
+
+    &__fake {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(200px, 50px);
+        opacity: 0;
+        animation: none;
+    }
+
+    &__text {
+        font-size: 20px;
+        letter-spacing: 6px;
+        text-indent: 6px;
+    }
+
+    &__links {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 70px;
+
+        @media (max-width: $laptop) {
+            bottom: 5vw;
+        }
+
+        @media (max-height: $critical-height) {
+            bottom: 10px;
+        }
+    }
+}

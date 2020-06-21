@@ -1,0 +1,18 @@
+.caption {
+    margin: 0;
+    font-size: 8.96vh;
+    line-height: 1.345;
+    color: $text-inactive;
+
+    &--smaller {
+        font-size: 6.66vh;
+    }
+
+    &__line {
+        display: block;
+
+        &--mark {
+            color: #fff;
+        }
+    }
+}
